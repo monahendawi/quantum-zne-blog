@@ -34,6 +34,17 @@ The circuit contains:
 
 The chosen circuit includes both single-qubit operations and entangling operations, making it suitable for studying the effect of noise accumulation.
 
+
+## Variational Quantum Circuit
+
+The following variational quantum circuit was used throughout the experiments.
+
+![Variational Circuit](1.png)
+
+Figure 1: The variational quantum circuit used in the experiments.<img width="498" height="174" alt="1" src="https://github.com/user-attachments/assets/494ab7eb-8b4f-491a-91b5-191ff6efdb88" />
+
+
+
 The circuit structure is illustrated below:
 
 ```python
