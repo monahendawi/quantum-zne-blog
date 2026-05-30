@@ -40,7 +40,9 @@ The chosen circuit includes both single-qubit operations and entangling operatio
 
 The following variational quantum circuit was used throughout the experiments.
 
-![Variational Circuit]
+![Variational Circuit](1.png)
+
+Figure 1: The variational quantum circuit used in the experiments.
 
 The circuit structure is illustrated below:
 
