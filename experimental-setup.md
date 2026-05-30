@@ -34,15 +34,7 @@ The circuit contains:
 
 The chosen circuit includes both single-qubit operations and entangling operations, making it suitable for studying the effect of noise accumulation.
 
-<img width="498" height="174" alt="1" src="https://github.com/user-attachments/assets/222a7c64-369b-49d4-bd27-1a5aff3b7780" />
 
-## Variational Quantum Circuit
-
-The following variational quantum circuit was used throughout the experiments.
-
-![Variational Circuit](1.png)
-
-Figure 1: The variational quantum circuit used in the experiments.
 
 The circuit structure is illustrated below:
 
@@ -61,7 +53,15 @@ qc.cx(0,1)
 
 qc.rx(theta[5], 0)
 ```
+<img width="498" height="174" alt="1" src="https://github.com/user-attachments/assets/222a7c64-369b-49d4-bd27-1a5aff3b7780" />
 
+## Variational Quantum Circuit
+
+The following variational quantum circuit was used throughout the experiments.
+
+![Variational Circuit](1.png)
+
+Figure 1: The variational quantum circuit used in the experiments.
 ---
 
 # Noise Models
