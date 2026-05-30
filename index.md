@@ -54,14 +54,3 @@ This project focuses on **Zero-Noise Extrapolation (ZNE)** as a practical altern
 
 ---
 
-## Author
-
-**Mona Hendawy**
-
-Assistant Lecturer, Faculty of Computers and Artificial Intelligence
-
-Research Interests:
-- Quantum Computing
-- Artificial Intelligence
-- Medical Image Analysis
-- Natural Language Processing
