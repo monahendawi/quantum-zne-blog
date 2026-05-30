@@ -1,13 +1,14 @@
-# Quantum Error Mitigation Blog
+# Quantum Error Mitigation with Zero-Noise Extrapolation
 
-## Introduction
+Welcome to my project blog.
 
-Welcome to my blog about Zero-Noise Extrapolation (ZNE).
+## Contents
 
-This project investigates:
-
-- Depolarizing Noise
-- Bit Flip Noise
-- Phase Flip Noise
-- First-Order Richardson Extrapolation
-- Second-Order Richardson Extrapolation
+- Background
+- Related Work
+- Quantum Noise Models
+- Zero-Noise Extrapolation
+- Richardson Extrapolation
+- Experimental Setup
+- Results
+- Conclusion
