@@ -1,14 +1,11 @@
 # Quantum Error Mitigation with Zero-Noise Extrapolation
 
-Welcome to my project blog.
-
 ## Contents
 
-- Background
-- Related Work
-- Quantum Noise Models
-- Zero-Noise Extrapolation
-- Richardson Extrapolation
-- Experimental Setup
-- Results
-- Conclusion
+- [Background](background)
+- [Related Work](related-work)
+- [Quantum Noise Models](noise-models)
+- [Zero-Noise Extrapolation](zero-noise-extrapolation)
+- [Experimental Setup](experimental-setup)
+- [Results](results)
+- [Conclusion](conclusion)
