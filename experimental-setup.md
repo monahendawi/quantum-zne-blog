@@ -133,7 +133,19 @@ The observable used in this project was:
 ⟨Z ⊗ Z⟩
 
 which measures the correlation between the two qubits.
+The observable used throughout the experiments is
 
+$$
+ZZ = Z \otimes Z
+$$
+
+and the corresponding expectation value is computed as
+
+$$
+E = Tr(\rho ZZ)
+$$
+
+where $\rho$ denotes the density matrix of the noisy quantum state.
 Expectation values were computed from the density matrix obtained from noisy simulations.
 
 ---
