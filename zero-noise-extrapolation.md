@@ -24,17 +24,6 @@ E(p)
 
 For sufficiently small noise levels, the expectation value can be approximated using a Taylor expansion:
 
-E(p) = E* + a₁p + a₂p² + a₃p³ + ...
-
-where:
-
-- E* is the ideal noise-free value.
-- p represents the noise strength.
-- a₁, a₂, a₃ are unknown coefficients.
-
-The goal of ZNE is to estimate E*.
-For small noise levels, the expectation value can be approximated as
-
 $$
 E(p)=E^{*}+a_1p+a_2p^2+a_3p^3+\cdots
 $$
@@ -44,6 +33,7 @@ where:
 - $E^{*}$ is the ideal noise-free value.
 - $p$ is the noise strength.
 - $a_i$ are unknown coefficients.
+  
 ![Linear Approximation](images/2.png)
 
 Figure 3: Linear approximation of the expectation value E(p) for small noise levels.
