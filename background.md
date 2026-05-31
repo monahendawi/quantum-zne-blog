@@ -4,6 +4,20 @@
 
 Quantum computing has the potential to revolutionize many fields, including optimization, cryptography, drug discovery, and machine learning. Unlike classical computers, which process information using bits, quantum computers use **qubits** that can exist in superposition states and become entangled with one another.
 
+A general single-qubit quantum state can be represented as:
+
+$$
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+$$
+
+where
+
+$$
+|\alpha|^2 + |\beta|^2 = 1
+$$
+
+to satisfy the normalization condition.
+
 These unique properties enable quantum computers to perform certain computations more efficiently than classical systems. However, today's quantum devices face a major challenge: **noise**.
 
 Quantum systems are extremely sensitive to their environment. Even small interactions with surrounding particles can disturb quantum states and introduce errors during computation. As a result, the output of a quantum circuit may differ significantly from the ideal result.
