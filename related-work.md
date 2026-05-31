@@ -16,6 +16,8 @@ The central idea is to intentionally increase the noise level of a quantum circu
 
 This approach demonstrated that meaningful error reduction could be achieved without introducing additional logical qubits.
 
+The concept of Zero-Noise Extrapolation was first introduced by Temme, Bravyi, and Gambetta in 2017. Their work demonstrated that expectation values obtained from noisy quantum circuits can be extrapolated to estimate the corresponding noise-free results without requiring quantum error correction [1].
+
 ---
 
 ## Noise Scaling Through Circuit Folding
@@ -32,6 +34,8 @@ This technique enables controlled noise amplification while preserving the inten
 
 Circuit folding has become one of the most widely used approaches for implementing ZNE on both simulators and real quantum hardware.
 
+A practical implementation of Zero-Noise Extrapolation was later proposed through Digital Zero-Noise Extrapolation, where circuit folding techniques were used to amplify noise while preserving the logical computation [3].
+
 ---
 
 ## Richardson Extrapolation
@@ -45,6 +49,8 @@ The first-order Richardson method removes the dominant noise contribution by com
 Researchers later extended this idea to higher-order Richardson extrapolation, which can eliminate additional error terms and improve estimation accuracy.
 
 However, higher-order methods may also become more sensitive to statistical fluctuations and imperfect noise scaling.
+
+Several studies have investigated higher-order extrapolation methods for improving mitigation accuracy. In particular, He et al. demonstrated that higher-order extrapolation techniques can significantly improve error mitigation performance compared to standard first-order approaches [2].
 
 ---
 
