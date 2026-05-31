@@ -58,8 +58,7 @@ qc.rx(theta[5], 0)
 
 The following variational quantum circuit was used throughout the experiments.
 
-<img width="498" height="174" alt="Variational Circuit"
-src="https://github.com/user-attachments/assets/222a7c64-369b-49d4-bd27-1a5aff3b7780" />
+![Variational Circuit](images/1.png)
 
 Figure 1: The variational quantum circuit used in the experiments.
 ---
