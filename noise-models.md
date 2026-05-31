@@ -27,7 +27,15 @@ X, Y, or Z
 while with probability (1-p), the qubit remains unchanged.
 
 Because of its simplicity, depolarizing noise is commonly used as a benchmark for evaluating quantum algorithms and error mitigation techniques.
+The Depolarizing channel is defined as:
 
+$$
+\rho' =
+(1-p)\rho
++
+\frac{p}{3}
+(X\rho X + Y\rho Y + Z\rho Z)
+$$
 ### Characteristics
 
 - Randomized quantum errors
@@ -51,6 +59,11 @@ or
 This error is represented by the Pauli-X operator.
 
 The bit-flip channel applies an X gate with probability p.
+The Bit-Flip channel is described by:
+
+$$
+\rho' = (1-p)\rho + pX\rho X
+$$
 
 ### Characteristics
 
@@ -75,6 +88,11 @@ For example:
 even though the probabilities of measuring 0 or 1 may remain unchanged.
 
 Phase-flip errors are particularly important because many quantum algorithms rely heavily on phase information.
+The Phase-Flip channel is described by:
+
+$$
+\rho' = (1-p)\rho + pZ\rho Z
+$$
 
 ### Characteristics
 
