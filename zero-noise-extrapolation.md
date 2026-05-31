@@ -33,7 +33,17 @@ where:
 - a₁, a₂, a₃ are unknown coefficients.
 
 The goal of ZNE is to estimate E*.
+For small noise levels, the expectation value can be approximated as
 
+$$
+E(p)=E^{*}+a_1p+a_2p^2+a_3p^3+\cdots
+$$
+
+where:
+
+- $E^{*}$ is the ideal noise-free value.
+- $p$ is the noise strength.
+- $a_i$ are unknown coefficients.
 ![Linear Approximation](images/2.png)
 
 Figure 3: Linear approximation of the expectation value E(p) for small noise levels.
@@ -88,36 +98,60 @@ As the scaling factor increases, the circuit experiences a higher effective nois
 # Richardson Extrapolation
 
 After collecting expectation values at different noise scales, we can estimate the zero-noise result using Richardson Extrapolation.
+The expectation value of an observable $O$ is
 
+$$
+E = \langle O \rangle
+$$
+
+In this project, the observable used is
+
+$$
+O = Z \otimes Z
+$$
+
+which measures the correlation between the two qubits.
 This technique combines measurements obtained from multiple noise levels to cancel the dominant noise contributions.
 
 ---
 
 # First-Order Richardson Extrapolation
 
-Using measurements from scale factors 1 and 3:
+Using measurements obtained at scaling factors 1 and 3:
 
-E₁ = E(s=1)
+$$
+E_1 = E(s=1)
+$$
 
-E₃ = E(s=3)
+$$
+E_3 = E(s=3)
+$$
 
-The first-order estimate is:
+The first-order Richardson estimate is
 
-E_ZNE = (3E₁ − E₃)/2
-
-This removes the leading linear noise term.
+$$
+E_{ZNE}^{(1)}
+=
+\frac{3E_1-E_3}{2}
+$$
 
 ---
 
 # Second-Order Richardson Extrapolation
 
-Using measurements from scale factors:
+Using measurements obtained at scaling factors
 
-s = 1, 3, 5
+$$
+s = 1,\;3,\;5
+$$
 
-a higher-order estimate can be obtained:
+the second-order Richardson estimate becomes
 
-E_ZNE^(2)
+$$
+E_{ZNE}^{(2)}
+=
+\frac{15E_1-10E_3+3E_5}{8}
+$$
 
 Second-order extrapolation removes additional error terms and generally produces a more accurate estimate of the ideal expectation value.
 
