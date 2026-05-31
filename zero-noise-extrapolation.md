@@ -35,6 +35,7 @@ where:
 The goal of ZNE is to estimate E*.
 
 ![Linear Approximation](images/2.png)
+
 Figure 3: Linear approximation of the expectation value E(p) for small noise levels.
 
 ---
