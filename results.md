@@ -37,6 +37,10 @@ For depolarizing noise, Zero-Noise Extrapolation successfully reduced the estima
 
 The results demonstrate that Richardson extrapolation can significantly improve the accuracy of expectation value estimation.
 
+![ZNE vs Noise](images/4.png)
+
+Figure 4: Comparison between the noisy expectation value and the mitigated expectation value obtained using Zero-Noise Extrapolation.
+
 ---
 
 # Bit-Flip Noise Results
