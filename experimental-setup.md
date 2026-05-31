@@ -128,11 +128,7 @@ Lower fidelity values indicate stronger noise effects.
 
 # Expectation Value Measurement
 
-The observable used in this project was:
 
-⟨Z ⊗ Z⟩
-
-which measures the correlation between the two qubits.
 The observable used throughout the experiments is
 
 $$
