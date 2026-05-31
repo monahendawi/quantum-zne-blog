@@ -82,6 +82,10 @@ To compare the two extrapolation methods, the mitigation error obtained under ea
 
 In all investigated cases, Second-Order Richardson Extrapolation produced lower errors than First-Order Richardson Extrapolation.
 
+![Error Reduction](images/5.png)
+
+Figure 5: Error reduction achieved by Zero-Noise Extrapolation across different noise models.
+
 ---
 
 # Discussion
