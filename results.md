@@ -71,20 +71,38 @@ The error reduction achieved by second-order Richardson extrapolation was signif
 
 ---
 
+
 # First-Order vs Second-Order Richardson Extrapolation
 
-To compare the two extrapolation methods, the mitigation error obtained under each noise model was analyzed.
+The mitigation performance of First-Order and Second-Order Richardson Extrapolation was evaluated for all investigated noise models.
 
-| Noise Model | No ZNE | First Order | Second Order |
+| Noise Model | No ZNE Error | First-Order Richardson | Second-Order Richardson |
 |------------|------------|------------|------------|
+| Depolarizing | 0.03547 | 0.00305 | 0.00031 |
 | Bit Flip | 0.05764 | 0.01247 | 0.00655 |
 | Phase Flip | 0.04570 | 0.00541 | 0.00085 |
 
-In all investigated cases, Second-Order Richardson Extrapolation produced lower errors than First-Order Richardson Extrapolation.
-
+The results show that both extrapolation methods significantly reduce the estimation error compared to the original noisy measurements. However, Second-Order Richardson Extrapolation consistently achieves the lowest error across all investigated noise models.
 ![Error Reduction](images/5.png)
 
 Figure 5: Error reduction achieved by Zero-Noise Extrapolation across different noise models.
+
+
+---
+
+# Improvement Analysis
+
+To better quantify the effectiveness of error mitigation, the improvement factor achieved by Second-Order Richardson Extrapolation was calculated.
+
+| Noise Model | Improvement Factor |
+|------------|------------|
+| Depolarizing | 115× |
+| Bit Flip | 8.8× |
+| Phase Flip | 53.6× |
+
+The improvement factor was computed as:
+
+Improvement Factor = Error Before ZNE / Error After Second-Order ZNE
 
 ---
 
@@ -94,35 +112,39 @@ Several important observations can be drawn from the experiments:
 
 ### Observation 1
 
-Noise significantly affects the accuracy of quantum computations even for relatively small circuits.
-
----
+Quantum noise significantly affects the accuracy of quantum computations even for relatively small circuits.
 
 ### Observation 2
 
-Zero-Noise Extrapolation consistently improved the estimation accuracy under all investigated noise models.
-
----
+Zero-Noise Extrapolation successfully reduced the estimation error under all investigated noise models.
 
 ### Observation 3
 
-Second-Order Richardson Extrapolation outperformed First-Order Richardson Extrapolation in every tested scenario.
-
----
+Second-Order Richardson Extrapolation consistently outperformed First-Order Richardson Extrapolation.
 
 ### Observation 4
 
-Phase-flip noise benefited most from higher-order extrapolation, suggesting that structured noise channels may be particularly suitable for advanced ZNE techniques.
+The largest improvement was observed for depolarizing noise, where the estimation error decreased from 0.03547 to 0.00031 after applying Second-Order Richardson Extrapolation.
+
+### Observation 5
+
+Phase-flip noise also benefited substantially from higher-order extrapolation, achieving an improvement factor of approximately 53.6×.
+
+### Observation 6
+
+Bit-flip noise showed the smallest relative improvement among the investigated noise models, although significant error reduction was still achieved.
 
 ---
 
-# Key Takeaways
+# Key Findings
 
 The experiments demonstrate that:
 
 - Zero-Noise Extrapolation is an effective Quantum Error Mitigation technique.
 - Circuit folding successfully amplifies noise while preserving circuit functionality.
-- Richardson Extrapolation can recover expectation values closer to the ideal result.
-- Higher-order extrapolation provides substantial improvements over standard first-order approaches.
+- Richardson Extrapolation recovers expectation values closer to the ideal result.
+- Second-Order Richardson Extrapolation consistently outperforms First-Order Richardson Extrapolation.
+- The best mitigation performance was achieved under depolarizing noise.
+- An improvement factor of approximately 115× was obtained for depolarizing noise using Second-Order Richardson Extrapolation.
 
-These findings support the use of ZNE as a practical mitigation strategy for current NISQ quantum devices.
+
