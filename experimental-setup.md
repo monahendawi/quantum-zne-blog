@@ -61,8 +61,8 @@ The following variational quantum circuit was used throughout the experiments.
 ![Variational Circuit](images/1.png)
 
 Figure 1: The variational quantum circuit used in the experiments.
----
 
+---
 # Noise Models
 
 Three different noise models were investigated:
