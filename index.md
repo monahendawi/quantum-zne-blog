@@ -54,3 +54,8 @@ This project focuses on **Zero-Noise Extrapolation (ZNE)** as a practical altern
 
 ---
 
+### 📚 Additional Resources
+
+- [References](references)
+
+---
