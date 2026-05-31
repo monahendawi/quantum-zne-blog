@@ -167,7 +167,9 @@ This operation preserves the logical functionality of the circuit while increasi
 Higher scaling factors introduce additional folded gate sequences and therefore accumulate more noise.
 
 ---
+![Folded Circuit](3.png)
 
+Figure 2: Example of circuit folding used to amplify noise while preserving the logical computation.
 # Richardson Extrapolation
 
 Two extrapolation strategies were evaluated:
