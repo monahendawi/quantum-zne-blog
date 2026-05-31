@@ -93,20 +93,18 @@ Figure 5: Error reduction achieved by Zero-Noise Extrapolation across different 
 # Improvement Analysis
 
 To better quantify the effectiveness of error mitigation, the improvement factor achieved by Second-Order Richardson Extrapolation was calculated.
-The improvement factor is defined as
 
-```text
-Improvement Factor = Error Before ZNE / Error After ZNE
-```
 | Noise Model | Improvement Factor |
 |------------|------------|
 | Depolarizing | 115× |
 | Bit Flip | 8.8× |
 | Phase Flip | 53.6× |
 
-The improvement factor was computed as:
+The improvement factor is defined as
 
-Improvement Factor = Error Before ZNE / Error After Second-Order ZNE
+```text
+Improvement Factor = Error Before ZNE / Error After ZNE
+```
 
 ---
 
