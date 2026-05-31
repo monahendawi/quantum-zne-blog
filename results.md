@@ -26,16 +26,16 @@ These results indicate that all investigated noise channels degrade the quantum 
 
 # Depolarizing Noise Results
 
-For depolarizing noise, Zero-Noise Extrapolation successfully reduced the estimation error.
-
-### Example Results
+For depolarizing noise, Zero-Noise Extrapolation produced the strongest improvement among all investigated noise models.
 
 | Method | Error |
 |----------|----------|
-| No ZNE | 0.01796 |
-| First-Order Richardson | 0.00079 |
+| No ZNE | 0.03547 |
+| First-Order Richardson | 0.00305 |
+| Second-Order Richardson | 0.00031 |
 
-The results demonstrate that Richardson extrapolation can significantly improve the accuracy of expectation value estimation.
+Second-Order Richardson Extrapolation reduced the estimation error by approximately 115× compared to the original noisy result.
+
 
 ![ZNE vs Noise](images/4.png)
 
