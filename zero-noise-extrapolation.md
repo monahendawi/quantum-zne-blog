@@ -119,11 +119,7 @@ $$
 
 The first-order Richardson estimate is
 
-$$
-E_{ZNE}^{(1)}
-=
-\frac{3E_1-E_3}{2}
-$$
+$$E_{ZNE}^{(1)}=\frac{3E_1-E_3}{2}$$
 
 ---
 
@@ -137,11 +133,7 @@ $$
 
 the second-order Richardson estimate becomes
 
-$$
-E_{ZNE}^{(2)}
-=
-\frac{15E_1-10E_3+3E_5}{8}
-$$
+$$E_{ZNE}^{(2)}=\frac{15E_1-10E_3+3E_5}{8}$$
 
 Second-order extrapolation removes additional error terms and generally produces a more accurate estimate of the ideal expectation value.
 
