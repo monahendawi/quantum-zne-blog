@@ -13,8 +13,8 @@ Instead of removing noise directly, ZNE follows a different strategy:
 3. Extrapolate these measurements back to the zero-noise limit.
 
 This process provides an estimate of the ideal expectation value while using the same noisy hardware.
+Zero-Noise Extrapolation was originally proposed by Temme et al. as a practical Quantum Error Mitigation technique for NISQ devices [1].
 
-The concept of Zero-Noise Extrapolation was first introduced by Temme, Bravyi, and Gambetta in 2017. Their work demonstrated that expectation values obtained from noisy quantum circuits can be extrapolated to estimate the corresponding noise-free results without requiring quantum error correction [1].
 
 ---
 
@@ -52,7 +52,6 @@ Instead, ZNE artificially increases the effective noise by modifying the quantum
 
 This process is called **Noise Scaling**.
 
-A practical implementation of Zero-Noise Extrapolation was later proposed through Digital Zero-Noise Extrapolation, where circuit folding techniques were used to amplify noise while preserving the logical computation [3].
 
 ---
 
@@ -86,6 +85,7 @@ Scale = 5
 GG†GG†G
 
 As the scaling factor increases, the circuit experiences a higher effective noise level.
+The circuit-folding strategy used in this project follows the Digital Zero-Noise Extrapolation framework proposed in the literature [3].
 
 ---
 
@@ -107,7 +107,6 @@ $$
 which measures the correlation between the two qubits.
 This technique combines measurements obtained from multiple noise levels to cancel the dominant noise contributions.
 
-Several studies have investigated higher-order extrapolation methods for improving mitigation accuracy. In particular, He et al. demonstrated that higher-order extrapolation techniques can significantly improve error mitigation performance compared to standard first-order approaches [2].
 
 ---
 
