@@ -552,13 +552,15 @@ Although both approaches aim to improve the reliability of quantum computations,
 
 ### Quantum Error Correction (QEC)
 
-Quantum Error Correction is often considered the long-term solution to quantum noise.
+Quantum Error Correction (QEC) is a collection of techniques designed to protect fragile quantum information from the effects of noise and hardware imperfections.
 
-The central idea is to encode a single logical qubit into multiple physical qubits so that errors can be detected and corrected during computation.
+In classical computing, error correction is relatively straightforward. If a bit is accidentally flipped from 0 to 1, redundancy can be used to detect and correct the mistake. Quantum systems, however, present a much greater challenge. Because quantum information cannot be copied arbitrarily and because measurements disturb quantum states, protecting quantum information requires specialized techniques.
 
-Unlike classical error correction, quantum error correction must preserve quantum information without directly measuring the quantum state.
+The main idea behind Quantum Error Correction is to encode a single logical qubit into multiple physical qubits. By distributing information across several qubits, it becomes possible to detect and correct certain errors without directly measuring the encoded quantum state.
 
-This requirement makes quantum error correction significantly more challenging than its classical counterpart.
+For many researchers, Quantum Error Correction represents the ultimate solution to quantum noise. In principle, a sufficiently large fault-tolerant quantum computer could perform long computations while continuously correcting errors as they occur.
+
+Unfortunately, implementing QEC requires a very large number of physical qubits, making it impractical for most current quantum devices.
 
 ---
 
