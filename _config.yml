@@ -1,3 +1,4 @@
-title: Quantum Error Mitigation Blog
-description: Exploring Zero-Noise Extrapolation and Richardson Extrapolation using Qiskit
-theme: jekyll-theme-modernist
+title: Quantum Error Mitigation using Zero-Noise Extrapolation
+description: Exploring Zero-Noise Extrapolation for NISQ Quantum Computers
+show_downloads: false
+theme: jekyll-theme-cayman
