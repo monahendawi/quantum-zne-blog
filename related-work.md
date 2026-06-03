@@ -1,82 +1,61 @@
 # Related Work
 
-## Early Efforts in Quantum Error Mitigation
+The challenge of quantum noise has motivated extensive research into Quantum Error Mitigation techniques over the past decade. Among the proposed approaches, Zero-Noise Extrapolation has emerged as one of the most influential and widely adopted methods for improving the accuracy of computations performed on NISQ devices.
 
-As quantum computers entered the Noisy Intermediate-Scale Quantum (NISQ) era, researchers quickly recognized that quantum noise would become one of the primary obstacles to reliable computation. While Quantum Error Correction provides a theoretically robust solution, its large qubit overhead makes it impractical for current hardware.
-
-This challenge motivated the development of Quantum Error Mitigation (QEM) techniques, which aim to improve computational accuracy without requiring fault-tolerant quantum devices.
+Rather than relying on large-scale Quantum Error Correction, Zero-Noise Extrapolation attempts to estimate the result of an ideal quantum computation by studying how expectation values change under increasing levels of noise. This idea has inspired a substantial body of research and has become a cornerstone of modern Quantum Error Mitigation.
 
 ---
 
-## Zero-Noise Extrapolation
+## Error Mitigation for Short-Depth Quantum Circuits
 
-One of the most influential contributions in this area was introduced by Temme, Bravyi, and Gambetta in 2017. Their work proposed **Zero-Noise Extrapolation (ZNE)** as a practical method for mitigating errors in short-depth quantum circuits.
+The foundations of Zero-Noise Extrapolation were established by Temme, Bravyi, and Gambetta in their pioneering 2017 work *Error Mitigation for Short-Depth Quantum Circuits*.
 
-The central idea is to intentionally increase the noise level of a quantum circuit and then extrapolate the measured expectation values back to the ideal zero-noise limit.
+In this paper, the authors introduced the idea of deliberately amplifying noise and then extrapolating the measured expectation values back to the zero-noise limit. Their work demonstrated that meaningful improvements in computational accuracy could be achieved without requiring full Quantum Error Correction.
 
-This approach demonstrated that meaningful error reduction could be achieved without introducing additional logical qubits.
-
-The concept of Zero-Noise Extrapolation was first introduced by Temme, Bravyi, and Gambetta in 2017. Their work demonstrated that expectation values obtained from noisy quantum circuits can be extrapolated to estimate the corresponding noise-free results without requiring quantum error correction [1].
+This contribution is widely regarded as one of the most important milestones in the development of Quantum Error Mitigation and forms the theoretical foundation of the present project.
 
 ---
 
-## Noise Scaling Through Circuit Folding
+## Practical Quantum Error Mitigation
 
-A key challenge in Zero-Noise Extrapolation is controlling the effective noise level.
+In 2018, Li and Benjamin further explored practical error mitigation strategies for near-term quantum devices.
 
-To address this issue, researchers introduced **circuit folding**, where a gate is replaced by an equivalent sequence:
+Their work emphasized the importance of developing techniques that can be implemented on noisy quantum hardware without requiring excessive computational resources. The study highlighted the growing need for mitigation methods that could bridge the gap between ideal quantum algorithms and the limitations of NISQ hardware.
 
-G → GG†G
-
-Although the logical operation remains unchanged, the circuit becomes deeper and accumulates more noise.
-
-This technique enables controlled noise amplification while preserving the intended quantum computation.
-
-Circuit folding has become one of the most widely used approaches for implementing ZNE on both simulators and real quantum hardware.
-
-A practical implementation of Zero-Noise Extrapolation was later proposed through Digital Zero-Noise Extrapolation, where circuit folding techniques were used to amplify noise while preserving the logical computation [3].
+The ideas presented in this work helped establish Quantum Error Mitigation as a practical alternative to full Quantum Error Correction for near-term quantum computing applications.
 
 ---
 
-## Richardson Extrapolation
+## Digital Zero-Noise Extrapolation
 
-Several extrapolation methods have been proposed for estimating the zero-noise expectation value.
+A major advancement in the field was introduced by Giurgica-Tiron and collaborators through the concept of Digital Zero-Noise Extrapolation.
 
-Among these methods, **Richardson Extrapolation** is one of the most popular due to its simplicity and effectiveness.
+One of the main challenges in implementing ZNE is the inability to directly control physical noise levels on quantum hardware. To overcome this limitation, the authors proposed circuit folding techniques that artificially increase the effective noise experienced by a circuit while preserving its logical computation.
 
-The first-order Richardson method removes the dominant noise contribution by combining measurements obtained at different noise scales.
-
-Researchers later extended this idea to higher-order Richardson extrapolation, which can eliminate additional error terms and improve estimation accuracy.
-
-However, higher-order methods may also become more sensitive to statistical fluctuations and imperfect noise scaling.
-
-Several studies have investigated higher-order extrapolation methods for improving mitigation accuracy. In particular, He et al. demonstrated that higher-order extrapolation techniques can significantly improve error mitigation performance compared to standard first-order approaches [2].
+This approach has become one of the most widely used implementations of Zero-Noise Extrapolation and serves as the primary noise-scaling strategy adopted in this project.
 
 ---
 
-## Noise Models in Previous Studies
+## Software Frameworks for Error Mitigation
 
-Many ZNE studies primarily focus on depolarizing noise because it provides a simple and mathematically convenient model for quantum errors.
+As Quantum Error Mitigation gained popularity, several software frameworks were developed to facilitate experimental research.
 
-However, real quantum systems often exhibit more structured error mechanisms such as:
+One of the most notable examples is Mitiq, an open-source software package specifically designed for Quantum Error Mitigation. Mitiq provides implementations of Zero-Noise Extrapolation, Probabilistic Error Cancellation, and other mitigation techniques.
 
-- Bit-Flip Noise
-- Phase-Flip Noise
-- Amplitude Damping
-- Readout Errors
-
-The effectiveness of ZNE may vary significantly depending on the underlying noise process.
+Such frameworks have significantly accelerated research in the field by providing standardized tools for evaluating mitigation strategies across different quantum platforms.
 
 ---
 
-## Research Gap
+## Position of This Work
 
-Most existing studies focus on demonstrating the effectiveness of Zero-Noise Extrapolation under a single noise model or using standard first-order Richardson extrapolation.
+Building upon the existing literature, this project focuses on evaluating the effectiveness of Zero-Noise Extrapolation under multiple quantum noise models.
 
-Fewer works provide a direct comparison between:
+While many studies demonstrate the general effectiveness of ZNE, this work provides a comparative analysis of:
 
-- Multiple quantum noise models
-- First-order Richardson extrapolation
-- Second-order Richardson extrapolation
+* Depolarizing Noise
+* Bit-Flip Noise
+* Phase-Flip Noise
 
-This project addresses this gap by evaluating Zero-Noise Extrapolation under depolarizing, bit-flip, and phase-flip noise while comparing the performance of first-order and second-order Richardson extrapolation techniques.
+In addition, the project investigates the relative performance of First-Order and Second-Order Richardson Extrapolation, providing insight into the benefits of higher-order error mitigation strategies.
+
+By combining multiple noise models with multiple extrapolation orders, the study offers a practical perspective on the strengths and limitations of Zero-Noise Extrapolation in realistic noisy quantum environments.
