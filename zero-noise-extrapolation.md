@@ -20,13 +20,15 @@ Among these techniques, Zero-Noise Extrapolation (ZNE) has emerged as one of the
 
 ## What is Zero-Noise Extrapolation?
 
-Zero-Noise Extrapolation (ZNE) is a Quantum Error Mitigation technique that attempts to estimate the result of an ideal noise-free quantum computation.
+Zero-Noise Extrapolation (ZNE) is one of the most widely used Quantum Error Mitigation techniques for noisy quantum computers.
 
-Instead of trying to eliminate noise from the hardware itself, ZNE studies how the output of a quantum circuit changes as the amount of noise increases.
+The primary objective of ZNE is to estimate the result that would have been obtained if the quantum computation had been executed on a perfectly noise-free quantum computer.
 
-By observing this behavior, it becomes possible to estimate what the result would have been if no noise were present.
+Unlike Quantum Error Correction, ZNE does not attempt to actively detect or correct errors during execution. Instead, it studies how the output of a quantum circuit changes as noise increases and then uses this information to infer the ideal result.
 
-The technique was first introduced by Temme, Bravyi, and Gambetta in 2017 and has since become one of the most influential methods in Quantum Error Mitigation research.
+This approach is particularly attractive for NISQ devices because it requires little additional hardware and can often be implemented directly on existing quantum processors.
+
+Since its introduction by Temme, Bravyi, and Gambetta in 2017, Zero-Noise Extrapolation has become one of the most influential error mitigation techniques in modern quantum computing research.
 
 ---
 
@@ -107,19 +109,17 @@ Figure 3: Approximation of the expectation value as a smooth function of noise s
 Although we cannot directly access the point corresponding to zero noise, we can estimate it using nearby noisy measurements.
 
 ---
-
 ## Noise Scaling
 
-To perform extrapolation, measurements must be collected at multiple noise levels.
+A central requirement of Zero-Noise Extrapolation is the ability to observe how a quantum computation behaves under different noise levels.
 
-Unfortunately, on real quantum hardware it is usually impossible to directly modify the physical noise strength.
+Ideally, we would like to execute the same quantum circuit multiple times while gradually increasing the physical noise present in the hardware. Unfortunately, most quantum processors do not provide direct control over their underlying noise sources.
 
-Instead, ZNE artificially amplifies the effective noise while preserving the logical computation.
+To overcome this limitation, ZNE relies on a technique known as Noise Scaling.
 
-This process is known as Noise Scaling.
+The goal of Noise Scaling is not to modify the quantum algorithm itself. Instead, it artificially amplifies the effective noise experienced by the circuit while preserving its logical behavior.
 
-The goal is not to change the quantum algorithm itself, but simply to make the circuit experience a larger amount of noise.
-
+By generating several versions of the same computation that experience different amounts of noise, researchers can observe how the measured expectation value changes and use this information to estimate the zero-noise result.
 ---
 
 ## Circuit Folding
