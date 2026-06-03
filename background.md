@@ -358,10 +358,9 @@ The circuit was intentionally designed to include both single-qubit and two-qubi
 
 This makes it an appropriate benchmark for studying Quantum Error Mitigation techniques such as Zero-Noise Extrapolation.
 
-[Insert circuit figure here]
 
 ```
-
+![Variational Circuit](images/1.png)
 Figure X: Variational quantum circuit used throughout the experiments.
 ```
 
