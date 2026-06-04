@@ -349,15 +349,7 @@ qc.rx(theta[5], 0)
 
 All noisy simulations were performed using the density matrix simulator available in Qiskit Aer. Density matrices were chosen because they can accurately represent noisy and mixed quantum states.
 
-# Noise Models
 
-Three noise models were investigated:
-
-Depolarizing Noise
-Bit-Flip Noise
-Phase-Flip Noise
-
-Noise probabilities ranging from 0.001 to 0.02 were considered, with additional experiments conducted at higher noise levels.
 
 # Evaluation Metrics
 
@@ -373,11 +365,33 @@ The observable used throughout the experiments was
 
 ZZ=Z⊗Z
 
+```python
+ZZ = SparsePauliOp.from_list([
+    ("ZZ", 1)
+])
+```
 with expectation value
 
-E=Tr(ρZZ)
-
+`E_ideal = Tr[(Z ⊗ Z) ρ]`
+The ZZ observable was selected because it measures correlations between the two qubits and is particularly sensitive to noise affecting entanglement.
 where ρ is the density matrix of the quantum state.
+
+```python
+backend = AerSimulator(method="density_matrix")
+
+result = backend.run(qc).result()
+
+rho = result.data(0)['density_matrix']
+```
+```python
+E_ideal = np.real(
+    np.trace(rho @ ZZ_matrix)
+)
+```
+
+
+
+
 
 ## Zero-Noise Extrapolation Setup
 
@@ -469,6 +483,25 @@ The reduction from 0.03547 to 0.00031 corresponds to an improvement factor of ap
 
 One possible explanation is that the smooth behavior of Depolarizing Noise aligns particularly well with the assumptions underlying Richardson Extrapolation, allowing the extrapolation procedure to estimate the zero-noise limit with high accuracy.
 
+```python
+from qiskit_aer.noise import depolarizing_error
+
+error_1q = depolarizing_error(p, 1)
+error_2q = depolarizing_error(p, 2)
+```
+```python
+noise_model.add_all_qubit_quantum_error(
+    error_1q,
+    ['rx', 'ry']
+)
+
+noise_model.add_all_qubit_quantum_error(
+    error_2q,
+    ['cx']
+)
+```
+Depolarizing noise was applied to both single-qubit and two-qubit gates. The parameter p represents the probability of an error occurring after each gate operation.
+
 ---
 
 # Bit-Flip Noise Results
@@ -529,6 +562,13 @@ The results show that both extrapolation methods significantly reduce the estima
 
 Figure 5: Error reduction achieved by Zero-Noise Extrapolation across different noise models.
 
+```python
+error =
+abs(
+ideal -
+noisy
+)
+```
 
 ---
 
