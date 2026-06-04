@@ -239,7 +239,7 @@ The ZNE workflow consists of three steps:
 3. Apply an extrapolation method to estimate the noise-free result.
 
 For sufficiently small noise levels, the expectation value can be approximated as:
-
+E(p) = E* + a₁p + a₂p² + a₃p³ + ...
 where:
 
 - \(E^{*}\) is the ideal noise-free expectation value.
