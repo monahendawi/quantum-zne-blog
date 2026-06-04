@@ -574,10 +574,7 @@ Figure 5: Error reduction achieved by Zero-Noise Extrapolation across different 
 
 ```python
 error =
-abs(
-ideal -
-noisy
-)
+abs(ideal - noisy)
 ```
 
 ---
