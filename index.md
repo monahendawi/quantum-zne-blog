@@ -263,13 +263,15 @@ with:
 
 G G† G
 
-Since \(G^\dagger G = I\), the computation remains unchanged, but the circuit becomes longer and accumulates more noise.
+Since G†G = I (the identity operation), the logical computation remains unchanged while the circuit accumulates more noise.
 
-This process can be repeated to generate different noise scales:
+Examples of circuit folding:
 
-- Scale 1: Original circuit
-- Scale 3: \(GG^\dagger G\)
-- Scale 5: \(GG^\dagger GG^\dagger G\)
+| Scale Factor | Circuit |
+|-------------|---------|
+| 1 | G |
+| 3 | G G† G |
+| 5 | G G† G G† G |
 
 ![Folded Circuit](images/3.png)
 
@@ -393,7 +395,6 @@ G
 
 thereby increasing the effective noise while preserving the logical computation.
 
-Figure 2: Example of circuit folding used for noise amplification.
 
 ## Richardson Extrapolation
 
@@ -613,22 +614,5 @@ These extensions would provide a deeper understanding of the capabilities and li
 [5] Y. Li and S. C. Benjamin, “Practical Quantum Error Mitigation for Near-Future Applications,” Physical Review X, vol. 8, no. 3, 2018.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-antum Error Mitigation
 
 ...
