@@ -289,13 +289,21 @@ The measured expectation values are then used to estimate the zero-noise result 
 ### First-Order Richardson Extrapolation
 
 Using measurements at scales 1 and 3:
-E_ZNE^(1) = (3E₁ − E₃) / 2
+
+```text
+First-Order:
+E_ZNE(1) = (3E1 - E3) / 2
+```
 This removes the dominant linear error term.
 
 ### Second-Order Richardson Extrapolation
 
 Using measurements at scales 1, 3, and 5:
-E_ZNE^(2) = (15E₁ − 10E₃ + 3E₅) / 8
+
+```text
+Second-Order:
+E_ZNE(2) = (15E1 - 10E3 + 3E5) / 8
+```
 
 This removes higher-order error terms and often provides a more accurate estimate of the ideal expectation value.
 
